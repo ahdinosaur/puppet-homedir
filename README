@@ -1,16 +1,21 @@
 homedir
 
-This is the homedir module.
+A Puppet module to manage my personal home directory.  Inspired by:
+http://vstone.eu/bootstrap-your-home-folder-puppet/
+
+Example
+-------
+
+mkdir -p ~/.puppet/modules
+git clone git://github.com/anl/puppet-homedir.git ~/.puppet/modules/homedir
+puppet apply -e "include homedir"
 
 License
 -------
 
-
-Contact
--------
-
+Apache License
 
 Support
 -------
 
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+Please log tickets and issues on GitHub.
