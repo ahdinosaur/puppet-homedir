@@ -39,6 +39,6 @@ class homedir(
 
   file { "${path}/.bashrc.d":
     ensure => directory,
-    mode   => '0500',
+    mode   => '0700',
   }
 }
