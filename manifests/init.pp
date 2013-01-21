@@ -1,41 +1,39 @@
 # == Class: homedir
 #
-# Full description of class homedir here.
+# Configure my personal home directory.  Shared, but not expected to be
+# generally useful.
+#
+# Inspired by this blog post:
+# http://vstone.eu/bootstrap-your-home-folder-puppet/
 #
 # === Parameters
 #
-# Document parameters here.
-#
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
-#
-# === Variables
-#
-# Here you should define a list of variables that this module would require.
-#
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if it
-#   has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should not be used in preference to class parameters  as of
-#   Puppet 2.6.)
+# [*path*]
+#   Path to home directory
 #
 # === Examples
 #
-#  class { homedir:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ]
-#  }
+# include homedir
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Andrew Leonard
 #
 # === Copyright
 #
-# Copyright 2011 Your name here, unless otherwise noted.
+# Copyright 2013 Andrew Leonard
 #
-class homedir {
+class homedir(
+  $path = '/home/aleonard',
+  ) {
 
+  file { "${path}/.bashrc":
+    mode   => '0400',
+    source => 'puppet:///modules/homedir/bashrc',
+  }
 
+  file { "${path}/.profile":
+    mode   => '0400',
+    source => 'puppet:///modules/homedir/profile',
+  }
 }
