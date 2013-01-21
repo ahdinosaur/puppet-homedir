@@ -36,4 +36,9 @@ class homedir(
     mode   => '0400',
     source => 'puppet:///modules/homedir/profile',
   }
+
+  file { "${path}/.bashrc.d":
+    ensure => directory,
+    mode   => '0500',
+  }
 }
