@@ -129,7 +129,7 @@ class homedir(
   vcsrepo { "${path}/.config/awesome":
       ensure => 'present',
       provider => 'git',
-      source => 'https://github.com/ahdinosaur/awesome-config',
+      source => 'https://github.com/ahdinosaur/powerarrow',
       user => "${user}",
       group => "${user}",
   }
