@@ -125,4 +125,20 @@ class homedir(
       user => "${user}",
       group => "${user}",
   }
+
+  vcsrepo { "${path}/.config/awesome":
+      ensure => 'present',
+      provider => 'git',
+      source => 'https://github.com/ahdinosaur/awesome-config',
+      user => "${user}",
+      group => "${user}",
+  }
+
+  vcsrepo { "${path}/bin":
+      ensure => 'present',
+      provider => 'git',
+      source => 'https://github.com/ahdinosaur/bin',
+      user => "${user}",
+      group => "${user}",
+  }
 }
