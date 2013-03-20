@@ -103,11 +103,7 @@ URxvt.clipboard.copycmd:  xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.clipboard.autocopy: true
 
-# http://r.untroubled.be/docs/urxvt/urxvt_keys_vim.html
-URxvt.keysym.M-Up:      \033[1;3A
-URxvt.keysym.M-Down:    \033[1;3B
-URxvt.keysym.M-Right:   \033[1;3C
-URxvt.keysym.M-Left:    \033[1;3D
+! http://r.untroubled.be/docs/urxvt/urxvt_keys_vim.html
 URxvt.keysym.M-Prior:   \033[5;3~
 URxvt.keysym.M-Next:    \033[6;3~
 URxvt.keysym.M-End:     \033[1;3F
@@ -122,7 +118,7 @@ URxvt.keysym.C-Next:    \033[6;5~
 URxvt.keysym.C-End:     \033[1;5F
 URxvt.keysym.C-Home:    \033[1;5H
 
-# https://wiki.archlinux.org/index.php/Home_and_End_keys_not_working#URxvt.2FRxvt
+! https://wiki.archlinux.org/index.php/Home_and_End_keys_not_working#URxvt.2FRxvt
 URxvt.keysym.M-Up:      \033[1;3A
 URxvt.keysym.M-Down:    \033[1;3B
 URxvt.keysym.M-Right:   \033[1;3C

@@ -1,1 +1,2 @@
 exec awesome
+xrdb -merge ~/.Xresources
