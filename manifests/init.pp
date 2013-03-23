@@ -142,4 +142,7 @@ class homedir(
       user => "${user}",
       group => "${user}",
   }
+  package { 'git-annex/unstable':
+    ensure => 'latest',
+  }
 }
