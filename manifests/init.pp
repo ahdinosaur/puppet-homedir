@@ -29,12 +29,20 @@ class homedir(
   $path = '/home/michael',
   ) {
 
-  users::useraccount { "${user}":
+  user { "${user}":
     ensure => present,
-    fullname => "${user}",
-    groups => ["sudo"],
+    comment => "${user}",
+    gid => "${user}",
+    groups => ["sudo", "rvm"],
+    home => "/home/${user}",
     shell => '/bin/zsh',
   }
+
+  #exec { "${user} homedir":
+  #  command => "/bin/cp -R /etc/skel /home/${user}; /bin/chown -R ${user}:$group /home/${user}",
+  #  creates => "/home/{$user}",
+  #  require => User[$user],
+  #}
 
   file { "${path}/.zshrc":
     mode   => '0400',
