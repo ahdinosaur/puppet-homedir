@@ -150,7 +150,8 @@ class homedir(
       user => "${user}",
       group => "${user}",
   }
-  package { 'git-annex/unstable':
-    ensure => 'latest',
+  apt::force { 'git-annex':
+    release => 'unstable',
+    require => Apt::Source['debian_unstable'],
   }
 }
