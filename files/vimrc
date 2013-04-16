@@ -21,6 +21,7 @@ Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
+Bundle 'hynek/vim-python-pep8-indent'
 
 filetype plugin indent on     " required!
 "
@@ -33,6 +34,10 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
+set tabstop=8
+set expandtab
+set softtabstop=2
+set shiftwidth=2
 
 " copy paste
 set clipboard=unnamedplus
