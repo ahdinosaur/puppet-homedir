@@ -143,6 +143,14 @@ class homedir(
       group => "${user}",
   }
 
+  vcsrepo { "${path}/.config/xfce4":
+      ensure => 'present',
+      provider => 'git',
+      source => 'https://github.com/ahdinosaur/xfce4-config',
+      user => "${user}",
+      group => "${user}",
+  }
+
   vcsrepo { "${path}/bin":
       ensure => 'present',
       provider => 'git',
