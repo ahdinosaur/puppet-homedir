@@ -40,3 +40,6 @@ source $ZSH/oh-my-zsh.sh
 
 # alias git to hub
 alias git=hub
+
+# nvm
+source ~/.nvm/nvm.sh
