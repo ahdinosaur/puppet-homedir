@@ -15,6 +15,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'moll/vim-node'
+Bundle 'pangloss/vim-javascript'
+Bundle 'altercation/vim-colors-solarized'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -41,3 +44,7 @@ set shiftwidth=2
 
 " copy paste
 set clipboard=unnamedplus
+
+syntax enable
+set background=dark
+colorscheme solarized
